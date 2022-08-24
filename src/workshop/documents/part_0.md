@@ -121,7 +121,7 @@ git config --global push.default simple
         python ./data/create_datasets.py --datastore_name workspaceblobstore --ml_workspace_name "AML_WS_NAME" --sub_id "SUBSCRIPTION_ID" --resourcegroup_name "RG_NAME"
         ```
         
-> Note: You can find the __Resource Group Name, Azure Machine Learning Name__ and the __Location__ from Azure portal.
+> Note: You can find the __Resource Group Name, Azure Machine Learning Worskspace Name__ and the __Subscription ID__ from Azure portal.
 > ![](./images/run_mlopsworkshop_azcli010.png)
 
    - Use the code and follow the instruction to finish the login.
