@@ -82,7 +82,7 @@ In this step you will clone the above forked repository into a development envir
 
 - A4. Click new __Terminal link__
 
-- A4. Clone __your__ 'MLOpsTemplate' repo in the Terminal of Compute Instance
+- A5. Clone __your__ 'MLOpsTemplate' repo in the Terminal of Compute Instance
 
     - Make sure you have forked the repo to your repository
     - Before you run following command, update the _{YOURGITHUBACCOUNT}_ part with your GitHub handle (look at your browser URL for the repo you forked earlier to get this information)
@@ -110,7 +110,7 @@ git config --global user.name "Firstname Lastname"
 git config --global push.default simple
 ```
 
-- A5. Generate and register data for the workshop
+- A6. Generate and register data for the workshop
 
     - Update arguments "_NAMES_ and _ID_" accordingly and then run following commands from the Terminal
 
@@ -129,7 +129,7 @@ git config --global push.default simple
    > Note: You need to login in and be authenticated to use the `azure cross platform CLI`.
         After copy the __code__ and go to the link, [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). 
 
-- A6. Install az ml CLI v2
+- A7. Install az ml CLI v2
     - Run the following command to see the `az extension`
         ```bash 
         az extension list
@@ -147,7 +147,7 @@ git config --global push.default simple
         az extension add -n ml -y --version 2.2.1
         ```
 
-- A7. Setup az cli
+- A8. Setup az cli
     - Run the following command from the Terminal:
         ```bash
         az login
@@ -163,7 +163,7 @@ git config --global push.default simple
         
 
 
-- A8. Configure the subscription and Azure Machine Learning Workspace
+- A9. Configure the subscription and Azure Machine Learning Workspace
     ```bash
     az account set -s "<YOUR_SUBSCRIPTION_NAME>"
     az configure --defaults group="<YOUR_RG_NAME>" workspace="<YOUR_AML_NAME>" location="<YOUR_REGION_NAME>"
@@ -176,7 +176,7 @@ git config --global push.default simple
     > Note: The results should look like the following:
     ![](./images/run_mlopsworkshop_azcli007.png)
 
-- A9. Create a Service Principal (SP)
+- A10. Create a Service Principal (SP)
 
     > If you have a Service Principal, please use the existing one. Ignore this step and go to next step 4.
     > If you don't have the Service Principal, please follow this step.
@@ -513,7 +513,7 @@ You are going to create PAT to allow your code access your personal git repo
 
 From this section, you'll add the SP information to your repo. The SP information will be used during the Github Actions.
 
-You have saved in step A9, B9 or C7 the output of the SP creation command, it should look like this:
+You have saved in step A10, B9 or C7 the output of the SP creation command, it should look like this:
 
 ```json
 {
