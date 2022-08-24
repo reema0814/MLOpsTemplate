@@ -81,7 +81,7 @@ To accomplish these goals, you will perform the following:
       ```bash 
         az ml online-deployment create --file core/scoring/deployment.yml 
       ```
-      >Note: Copy the **Endpoint Name** that is generated as the output of this command and save it in notpad as it will be used in next command.
+      >Note: Copy the **Endpoint Name** that is generated as the output of this command and save it in notepad as it will be used in next command.
    > - Test the deployed service with mock-up data from scoring_test_request.json
    > 
    > Action Items: Run the following code snippet and replace YOUR_ENDPOINT_NAME with **Endpoint Name** that you saved in previous step.
