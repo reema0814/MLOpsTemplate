@@ -61,7 +61,8 @@
 
 - 2.2 After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
     ![](./images/run_mlopsworkshop_azcli009.png)
-
+    
+- 2.3 Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
     > Note: You will have the same repository (`MLOpsTemplate`) under your Github account name.
     > Leave the tab open and **do not** close it yet. You will come back to your repository.
 
@@ -73,11 +74,13 @@ In this step you will clone the above forked repository into a development envir
 
 ### Option A. Use Compute Instance in AML
 
-- A1. Go to [Azure Machine Learning Studio](https://ml.azure.com)
+- A1. In the Azure portal, go to *mlops-rg-xxxx* resource group and open **aml-xxxx** machine learning workspace.
 
-- A2. Go to __Compute__ > __Compute Instance__
+- A2. In **aml-xxxx** machine learning workspace, click on **Launch Studio** button.
 
-- A3. Click new __Terminal link__
+- A3. Go to __Compute__ > __Compute Instance__
+
+- A4. Click new __Terminal link__
 
 - A4. Clone __your__ 'MLOpsTemplate' repo in the Terminal of Compute Instance
 
@@ -120,6 +123,11 @@ git config --global push.default simple
         
 > Note: You can find the __Resource Group Name, Azure Machine Learning Name__ and the __Location__ from Azure portal.
 > ![](./images/run_mlopsworkshop_azcli010.png)
+
+   - Use the code and follow the instruction to finish the login.
+   
+   > Note: You need to login in and be authenticated to use the `azure cross platform CLI`.
+        After copy the __code__ and go to the link, [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). 
 
 - A6. Install az ml CLI v2
     - Run the following command to see the `az extension`
