@@ -4,13 +4,11 @@
 
 1. To get the lab environment details, you can select **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided at registration. You can also open the Lab Guide on separate and full window by selecting the **Split Window** from lower right corner. Also, you can start, stop and restart virtual machines from **Virtual Machines** tab.
 
-   ![](./media/getting-started2.png "Lab Environment")
+   ![](./media/gs01.png "Lab Environment")
  
 
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
-
-   ![](./media/getting-started4.png "Lab Environment")
    
 1. On **Sign in to Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -32,14 +30,6 @@
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
-   
-1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
-
-    ![](./media/select-rg.png "Resource groups")
-   
-1. Confirm you have all resource group are present as shown below.
-
-    ![](./media/getting-started3.png "Resource groups")
    
 1. Now, click on the **Next** from lower right corner to move on next page.
 
