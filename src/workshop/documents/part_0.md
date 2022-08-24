@@ -170,7 +170,7 @@ git config --global push.default simple
     az configure -l -o table
     ```
     
-    > Note: You can find the __Resource Group Name__, __Azure Machine Learning Name__ and __the Location__ from the user profile in the AML Studio.
+    > Note: You can find the __Subscription Name__,__Resource Group Name__, __Azure Machine Learning Name__ and __the Location__ from the user profile in the AML Studio.
     ![](./images/run_mlopsworkshop_azcli008.png)
 
     > Note: The results should look like the following:
