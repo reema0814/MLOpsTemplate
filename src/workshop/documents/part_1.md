@@ -29,7 +29,7 @@ To illustrate how the process works, the notebook was refactored into a feature 
 2. Discuss in your team why a monolithic code structure is a challenge to a scalable and repeatable ML development process? 
     > Note: Now observe how the monolithic notebook was refactored into a feature/data engineering module, a ML training module and a model validation module so that they can be developed and run independently.
 
-3. Go to the workshop folder.
+3. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
     > Action Items: Run the following code snippet.
     ```bash 
     cd src/workshop
@@ -37,6 +37,7 @@ To illustrate how the process works, the notebook was refactored into a feature 
     > Note: Review the ```workshop/data``` folder. There are data files that were created by the data generation process. The same data files were also sent to the  Azure Machine Learning Studio's default datastore under ```workspaceblobstore/mlops_workshop/data```.
 4. Create your own development branch where you can make and track changes. This branch will be your development area to create and test new code or pipelines before committing or merging the code into a common branch, such as ```integration```.
 
+    
     - Run following command to create a new branch named "yourname-dev"
         ```bash
         git checkout -b yourname-dev
