@@ -19,18 +19,23 @@ To accomplish these goals, you will perform the following:
 
 
 ## Steps
-1. Go to the workshop folder.
+1. In Azure machine learning workspace studio, go to **Compute** under **Manage** and click **Compute clusters**.
+2. Click **+New**.
+3. Under **Create compute cluster**, on **Virtual Machine tab** leave the default values and click **Next**.
+4. Give compute name as `cpu-cluster` and click **Create**.
+
+5. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
    > Action Item: Run the following code snippet.
     ```bash 
     cd src/workshop
     ```
-2. Set defaults values to configure your resource group and workspace.
-   > Action Item: Run the following code snippet.
+6. Set defaults values to configure your resource group and workspace.
+   > Action Item: Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with *mlops-rg-xxxx* and **aml-xxxx** respectively.
     ```bash 
     az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
     ```
 
-3. Run the ```feature_engineering.py``` module under the ```data_engineering``` folder by following the steps below:
+7. Run the ```feature_engineering.py``` module under the ```data_engineering``` folder by following the steps below:
    > Action Items:
    > - Run the following code snippet:
       ```bash 
@@ -38,7 +43,7 @@ To accomplish these goals, you will perform the following:
       ```
    > - Go to Azure ML Studio and locate the run detail for this experiment.
 
-4. Run the ```ml_training.py``` module under the ```training``` folder by following the steps below:
+8. Run the ```ml_training.py``` module under the ```training``` folder by following the steps below:
    > Action Items:
    > - Run the following code snippet:
       ```bash 
@@ -46,7 +51,7 @@ To accomplish these goals, you will perform the following:
       ```
    > - Go to Azure ML Studio and locate the run detail for this experiment.
 
-5. Run the ```ml_evaluating.py``` module under the ```evaluating``` folder by following the steps below:
+9. Run the ```ml_evaluating.py``` module under the ```evaluating``` folder by following the steps below:
    > Action Items: 
    > - Run the following code snippet:
 
@@ -76,7 +81,10 @@ To accomplish these goals, you will perform the following:
       ```bash 
         az ml online-deployment create --file core/scoring/deployment.yml 
       ```
+      >Note: Copy the **Endpoint Name** that is generated as the output of this command and save it in notpad as it will be used in next command.
    > - Test the deployed service with mock-up data from scoring_test_request.json
+   > 
+   > Action Items: Run the following code snippet and replace YOUR_ENDPOINT_NAME with **Endpoint Name** that you saved in previous step.
       ```bash 
         az ml online-endpoint invoke -n YOUR_ENDPOINT_NAME --deployment green --request-file core/scoring/scoring_test_request.json 
       ``` 
