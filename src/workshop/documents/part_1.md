@@ -42,6 +42,7 @@ To illustrate how the process works, the notebook was refactored into a feature 
         ```bash
         git checkout -b yourname-dev
         ```
+	> Note: If you see **To add an exception for this directory** as an output, then run the command mentioned to call in the output and then **re-run** the the above command again. 
     - This will set the working branch to ```yourname-dev```. To check, run the following command:
         ```bash
         git branch
