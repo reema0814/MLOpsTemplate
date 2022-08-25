@@ -55,8 +55,8 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
         git push origin yourname-dev
         ```
         > Note: `git status` shows the files that have been modified. It is useful for seeing the latest status of the files, but isn't necessary to commit changes.
-
-    > - Check to see if the workflow was properly triggered by going to your github repo and selecting the Actions tab.
+    > - Note: After running the above command, credentials of your Github account might be asked for authentication so for **username** just enter your **Github username** and for **password** enter the **PERSONAL ACCESS TOKEN (PAT)** that you generated in **part 0**. 
+    > - Check to see if the workflow was properly triggered by going to your github repo and selecting the **Actions tab**.
 
 ## The CI CD Workflow is shown below:
 ![pipeline](images/part3cicd.png)
