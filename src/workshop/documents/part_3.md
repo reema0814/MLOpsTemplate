@@ -22,7 +22,7 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 
 2. Create an automated unit test task that will be triggered by pushing the code to your development/feature branch. Let's use the ```Feature_Engineering``` module as the automated unit test to run to make sure the module performs correctly.
 
-    > Action Items: Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
+    > Action Items: Update the `workshop_unit_test.yml` file with your secret credentials in your repo under **yourname-dev** branch. Replace the resource group, workspace and location with your specific details.
     > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder
     > - Make the following updates to the file: 
     > - Update the secret name by replacing the ```AZURE_SERVICE_PRINCIPAL``` to match the GitHub secret name for your Service Principal that was created in Part 0. (If you followed the naming convention in part 0, there is no need to update this as your secret name should be ```AZURE_SERVICE_PRINCIPAL```.)
