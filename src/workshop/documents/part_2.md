@@ -77,6 +77,8 @@ To accomplish these goals, you will perform the following:
       ```bash 
         az ml online-endpoint create --file core/scoring/endpoint.yml 
       ```
+   > **Note:** Wait for 15 mins. 
+   
    > - Create a green deployment 
       ```bash 
         az ml online-deployment create --file core/scoring/deployment.yml 
