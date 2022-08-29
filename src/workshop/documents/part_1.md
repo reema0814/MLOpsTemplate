@@ -42,11 +42,17 @@ To illustrate how the process works, the notebook was refactored into a feature 
         ```bash
         git checkout -b yourname-dev
         ```
-	> Note: If you see **To add an exception for this directory** as an output, then run the command mentioned to call in the output and then **re-run** the the above command again. 
+	> **Note:** If you see **To add an exception for this directory** as an output, then run the command mentioned to call in the output and then **re-run** the the above command again. 
     - This will set the working branch to ```yourname-dev```. To check, run the following command:
         ```bash
         git branch
         ```
+	> **Note:** Check in your GitHub account whether the new branch(yourname-dev) is created or not, if not then run this command to push the changes to your GitHub account.
+
+   ```
+   git push --set-upstream origin yourname-dev
+   ```
+   
 5. Review the refactored engineering logic from the notebook at ```feature_engineering.py``` module under the ```data_engineering``` folder.
     - The module performs the following:
         - Accepts the following parameters:
