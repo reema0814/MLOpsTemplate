@@ -67,7 +67,11 @@ The goal of this section is to get a fully functional CD pipeline that will:
         - Operates a traffic update operation to swap around the traffic routing and effectively enabling the latest model version to support 100% of the traffic, i.e. becoming 'production'.
 
     > Action Items:
-    > 1. Commit your configuration changes and push them up to github in your own development branch. 
+    > 1. Commit your configuration changes and push them up to github in your own development branch by:
+    >- Click on "pull requests" tab and Click on "New pull request". 
+    >- Set the `base` branch to `integration` and the `compare` branch to `yourname-dev`.
+    >- IMPORTANT NOTE: Make sure the integration branch you choose as the base is pointing to your `forked` repository and NOT the Microsoft MLOpsTemplate repository.
+    >- Click on "Create pull request". 
     > 2. Go to the GitHub UI under 'Actions', and select 'workshop_cd', and trigger it to run now on your own branch.
     > 3. Once triggered, click on it to open up the details and monitor its execution.
 
@@ -81,17 +85,19 @@ The goal of this section is to get a fully functional CD pipeline that will:
     > - Go to your Github repo, and click on 'Settings'
     > - Click on 'Branches' under 'Code and automation'
     > - Click on 'Add branch protection rule' under the 'Branch protection rules' to create a new rule, keep all defaults and set the following:
-    >     - Branch name pattern: main
-    >     - Require a pull request before merging: CHECK
-    >     - Require status checks to pass before merging: CHECK
-    >     - Status checks that are required: type-in 'Workshop-Deployment' in the search box and select it (it should auto-complete). This name is the job name defined in the workshop_cd.yml file.
+    >     - Branch name pattern: `main`
+    >     - Require a pull request before merging: **CHECK**
+    >     - Require status checks to pass before merging: **CHECK**
+    >     - Status checks that are required: type-in **'Workshop-Deployment'** in the search box and select it (it should auto-complete). This name is the job name defined in the workshop_cd.yml file.
     >     - Click **Create** to enable this rule on your repo.
 
-    You can easily test this rule by creating a pull request to main from integration.
+    > You can easily test this rule by **creating a pull request to main from integration**.
 
     > Action Items:
-    > 1. Create a pull request from integration to main (if you have no changes in integration, first commit a simple change in your own dev branch by adding a comment to the score.py script for instance), and bring this over to integration via a Pull Request from your dev branch to integration. Once the CI workflow has completed, a Pull Request from integration to main will be automatically created.
-    > 2. Observe the status of the Pull Request to main: it should have triggered the CD run (based on the workshop_cd.yml triggers definition), and there should be a rule that prevents merging the Pull Request until the CD workflow completes succesfully.
+    > 1. If you have no changes in integration, first commit a simple change in your own dev branch by adding a comment to the score.py script for instance.
+    > 2. Bring this over to integration via a Pull Request from your dev branch to integration and an CI worklow will be triggered.
+    > 3. Once the CI workflow has completed, a Pull Request from integration to main will be automatically created.
+    > 4. Observe the status of the Pull Request to main: it should have triggered the CD run (based on the workshop_cd.yml triggers definition), and there should be a rule that prevents merging the Pull Request until the CD workflow completes succesfully.
 
 ## Success criteria
 
