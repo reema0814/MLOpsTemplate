@@ -12,8 +12,15 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 ## Steps
 1. Move to your dev branch you created in step 1 if you are not already there.
 
-    > Action Items: 
+    > **Action Items: **
+
     > - Navigate to the repo if not already there by running ```cd PATH_TO_REPO``` with the proper path to the cloned location.
+    > - (Run the following command to switch back files until you reach your repo i.e. MLOpsTemplate)
+    ```
+    cd ..
+    ```
+
+
     > - Run following command to check out your "yourname-dev"
         
     ```bash
@@ -22,11 +29,16 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 
 2. Create an automated unit test task that will be triggered by pushing the code to your development/feature branch. Let's use the ```Feature_Engineering``` module as the automated unit test to run to make sure the module performs correctly.
 
-    > Action Items: Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
-    > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder
+    > **Action Items:** Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
+    > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder by running the following command:
+    ```
+    cd .github/workflows
+    nano workshop_unit_test.yml
+    ```
     > - Make the following updates to the file: 
     > - Update the secret name by replacing the ```AZURE_SERVICE_PRINCIPAL``` to match the GitHub secret name for your Service Principal that was created in Part 0. (If you followed the naming convention in part 0, there is no need to update this as your secret name should be ```AZURE_SERVICE_PRINCIPAL```.)
     > - Update resource group name, workspace name, location with the specific names of your resource group, workspace, and location created in Part 0.
+    > - **Note:** You can use the arrow keys to move around in the file. Press the "CTRL + X" keys to close the file. You will be prompted to save your changes. Press the "y" key to save your changes and then press enter to exit.
 
 3. Next, review the contents in the ```workshop_unit_test.yml``` file to understand the steps and how it is being triggered.
 
