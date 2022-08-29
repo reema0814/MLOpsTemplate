@@ -8,9 +8,19 @@ After learning about how GitHub can be leveraged for MLOps, your team decides to
 
 ## Steps:
 
-1. Locate the CI pipeline template under ```.github/workflows/workshop_ci.yml``` and add all the needed information for resource group name, workspace name, location and secrets for Azure and Github. They are all tagged with ```#setup```. 
+1. Run the following command to switch back files until you reach your repo i.e. MLOpsTemplate)
+    ```
+    cd ..
+    ```
+    > Locate the CI pipeline template under ```.github/workflows/workshop_ci.yml``` by running the following command:
+    ```
+    cd .github/workflows/
+    nano workshop_ci.yml
+    ```
+    And, add all the needed information for resource group name, workspace name, location and secrets for Azure and Github. They are all tagged with ```#setup```. 
 
     > Action Item: Update resource group name, workspace name, location, Azure Secret and Github Secret inside workshop_ci.yml file.
+    > **Note:** You can use the arrow keys to move around in the file. Press the "CTRL + X" keys to close the file. You will be prompted to save your changes. Press the "y" key to save your changes and then press enter to exit.
 
 2. Now Let's consider a common scenario in a ML development team. One of the team members is going to work on a new feature (examples can be changes to feature engineering, hyper-parameter selection, type of the model, etc). For this work, a common pattern is to first fork and clone the repository on your local machine (which you already have done in Step 0).  Then you need to switch to the ```yourname-dev``` local branch which you created in step 3.
 
@@ -27,8 +37,17 @@ After learning about how GitHub can be leveraged for MLOps, your team decides to
     > Note: Hopefully "yourname-dev" branch is colored green with a * next to it.
 
 3. In this step we want to make some changes to our ML code, locate and open the following file: ```/src/workshop/core/training/ml_training.py```
-
+    > Run the following command to switch back files until you reach your repo i.e. MLOpsTemplate)
+    ```
+    cd ..
+    ```
+    > Locate the CI pipeline template under ```/src/workshop/core/training/ml_training.py``` by running the following command:
+    ```
+    cd src/workshop/core/training/
+    nano ml_training.py
+    ```
     >Action Item: Update `ml_training.py`, you can search for #setup and modify `alpha` to: `model = Ridge(alpha=100)`
+    >**Note:** You can use the arrow keys to move around in the file. Press the "CTRL + X" keys to close the file. You will be prompted to save your changes. Press the "y" key to save your changes and then press enter to exit.
 
     The default for the model is set to 100,000. By updating alpha we think it will improve the model performance, let's find out! Make sure to save the changes to the file. Now we want to commit these changes to the local branch and push them to our github repository. This will update the remote github branch on the repository.
 
