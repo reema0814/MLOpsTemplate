@@ -44,7 +44,7 @@ The goal of this section is to get a fully functional CD pipeline that will:
     You can have as many deployments as you want behind an endpoint. The endpoint traffic routing enables you to control which parts of the traffic to the endpoint gets routed to which deployment. In this workshop, we take the blue/green approach where we'll have 2 deployments (named green and blue respectively), which will take turn playing the role of production/staging. We only have one deployment file define though, as we automatically override the name of the deployment as part of a custom GitHub action which we'll review later in this section.
 
     > Action Items:
-    > 1. Edit `endpoint.yml` file to setup the name of your endpoint. This name needs to be unique within the region you are deploying into as the endpoint name is part of the endpoint URI. Look for #setup in that file.(Give endpoint name:**mlops-workshop-endpoint-DID** ; replace **DID** with your **Deployment ID**.)
+    > 1. Edit `endpoint.yml` file to setup the name of your endpoint. This name needs to be unique within the region you are deploying into as the endpoint name is part of the endpoint URI. Look for #setup in that file.(Give endpoint name:`mlops-workshop-endpoint-DID` ; replace **DID** with your **Deployment ID**.)
     > 2. Edit `deployment.yml` to setup the name of the endpoint this deployment belongs to to the same name you defined just above. Look for #setup in that file.
 
     Now let's configure the GitHub Actions workflow file that controls the CD process located at `.github/workflows/workshop_cd.yml`
