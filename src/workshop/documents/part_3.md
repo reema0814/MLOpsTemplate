@@ -12,7 +12,7 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 ## Steps
 1. Move to your dev branch you created in step 1 if you are not already there.
 
-    > **Action Items: **
+    > Action Items:
 
     > - Navigate to the repo if not already there by running ```cd PATH_TO_REPO``` with the proper path to the cloned location.
     > - (Run the following command to switch back files until you reach your repo i.e. MLOpsTemplate)
