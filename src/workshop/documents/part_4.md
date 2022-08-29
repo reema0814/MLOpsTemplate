@@ -92,13 +92,13 @@ After learning about how GitHub can be leveraged for MLOps, your team decides to
     >Note: By design the CI workflow will fail if the new updated model does not perform better than our best previous model and that is expected. The CI workflow prevents promoting a new model that does not pass the evaluation step. 
 
 
-> IMPORTANT NOTE: On success on the CI workflow, a Pull Request (PR) to main is created from the integration branch. This is by design as per the definition of the CI workflow (see last step in the workflow yml file).
+> **IMPORTANT NOTE:** On success on the CI workflow, a Pull Request (PR) to main is created from the integration branch. This is by design as per the definition of the CI workflow (see last step in the workflow yml file).
 >
 > What you will notice will happen, is that another workflow, the CD workflow, is triggered (you could go to 'Actions' in github and see that 'workshop-cd' appeared and is running). We will cover this workflow in the next section. Its trigger is based on having a Pull Request open to main, which is how we automate the CI -> CD chain.
 >
 > <u>At this point the CD workflow will fail, and this is expected</u>, because we haven't configured it yet (the yaml at this point is incorrect and pointing to incorrect Azure resources for instance).
 >
-> Another important observation: if you go to the Pull Request, you can see that you'd be allowed to merge the Pull Request to main, even though 'workshop-cd' fails. <u>DO NOT MERGE IT</u>, instead <u>CLOSE IT</u>, but observe that it is inappropriate to have the option to close the PR.
+> **Another important observation:** if you go to the Pull Request, you can see that you'd be allowed to merge the Pull Request to main, even though 'workshop-cd' fails. <u>DO NOT MERGE IT</u>, instead <u>CLOSE IT</u>, but observe that it is inappropriate to have the option to close the PR.
 >
 >We definitely do not want to allow moving some code to 'main' if something in the integration branch is broken (at this point, the workflow itself is broken, but it could be anything, like the scoring script). Take note of that, as we will setup in the next section a <u>branch protection system</u> that will prevent such a merge to be possible unless the CD workflow is succesful.
 
