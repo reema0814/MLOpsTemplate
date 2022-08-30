@@ -67,11 +67,7 @@ The goal of this section is to get a fully functional CD pipeline that will:
         - Operates a traffic update operation to swap around the traffic routing and effectively enabling the latest model version to support 100% of the traffic, i.e. becoming 'production'.
 
     > Action Items:
-    > 1. Commit your configuration changes and push them up to github in your own development branch by:
-    >- Click on "pull requests" tab and Click on "New pull request". 
-    >- Set the `base` branch to `integration` and the `compare` branch to `yourname-dev`.
-    >- IMPORTANT NOTE: Make sure the integration branch you choose as the base is pointing to your `forked` repository and NOT the Microsoft MLOpsTemplate repository.
-    >- Click on "Create pull request". 
+    > 1. Commit your configuration changes and push them up to github in your own development branch.
     > 2. Go to the GitHub UI under 'Actions', and select 'workshop_cd', and trigger it to run now on your own branch.
     > 3. Once triggered, click on it to open up the details and monitor its execution.
 
