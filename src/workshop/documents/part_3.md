@@ -32,7 +32,7 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
     > **Action Items:** Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
     > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder by running the following command:
     ```
-    cd .github/workflows
+    cd .github/workflows/
     nano workshop_unit_test.yml
     ```
     > - Make the following updates to the file: 
