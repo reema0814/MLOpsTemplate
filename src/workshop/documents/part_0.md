@@ -474,7 +474,7 @@ You are going to create PAT to allow your code access your personal git repo
 
     ![](./images/github4005.png)
 
-- Check for '_repo_' and '_workflow_' for the scope and then __click__ '_create_' at the bottom of your screen
+- Check for '_repo_' and '_workflow_' for the scope and then __click__ '_Generate Token_' at the bottom of your screen
 
     ![](./images/github4006.png)
 
