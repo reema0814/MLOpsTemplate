@@ -52,6 +52,7 @@ To illustrate how the process works, the notebook was refactored into a feature 
    ```
    git push --set-upstream origin yourname-dev
    ```
+   > - **Note:** After running the above command, credentials of your Github account might be asked for authentication so for **username** just enter your **Github username** and for **password** enter the **PERSONAL ACCESS TOKEN (PAT)** that you generated in **part 0**.
    
 5. Review the refactored engineering logic from the notebook at ```feature_engineering.py``` module under the ```data_engineering``` folder.
     - The module performs the following:
