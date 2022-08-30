@@ -71,8 +71,11 @@ To accomplish these goals, you will perform the following:
 7. Discuss this question: Why should we run the modules both individually and together in a pipeline? 
 
 8. Deploy to Azure ML Managed Online Endpoint by following the steps below:
-   > Action Items:
-   > - Update the ```endpoint.yml``` file and ```deployment.yml``` by updating the name of the endpoint (should be a unique name)
+   > **Action Items:**
+   > - In AML Studio, under Author navigate to the Notebooks > MLOpsTemplate > src > workshop > core > scoring
+   > - Select endpoint.yml and deployment.yml under scoring folder
+   > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and Click **Authenticate** and Press Ctrl+S to save change.
+   > Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
    > - Create your endpoint
       ```bash 
         az ml online-endpoint create --file core/scoring/endpoint.yml 
