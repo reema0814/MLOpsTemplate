@@ -131,29 +131,8 @@ git config --global push.default simple
  > **Note:** The results should look like the following:
     ![](./images/run_mlopsworkshop_azcli007.png)
 
-10. Create a Service Principal (SP)
 
-    > If you have a Service Principal, please use the existing one. Ignore this step and go to next step 4.
-    > If you don't have the Service Principal, please follow this step.
-    
-    > Note: In case you don't have permission to create SP, please reach out to your Azure infra/security team to get help.
-    
-    - Get the following information:
-        - Your Azure SubscriptionID where your Azure Machine Learning service is 
-        - Resource Group Name where your Azure Machine Learning service is 
-        - (Random) Name for the Service Principal you're about to create
-
-    - To create a Service Principal, run the following command:
-
-    ```bash
-    az ad sp create-for-rbac --name {REPLACE_SPNAME} --role contributor --scopes /subscriptions/{REPLACE_SUBSCRIPTIONID}/resourceGroups/{REPLACE_RESOURCEGROUPNAME} --sdk-auth
-    ```
-    
-    ![](./images/arm002.png)
-
-    > IMPORTANT: copy/save the entire json output of that command, we will need this to setup the GitHub Secret that will enable to login into Azure using this Service Principal
-
-    > **Note:** Once done, leave the terminal open. Do not terminate it and head to the next task.
+ > **Note:** Once done, **leave the terminal open**. **Do not terminate it** and head to the next task.
 
 ## Task 3. Configure secret in your Github account
 
@@ -202,7 +181,7 @@ You are going to create PAT to allow your code access your personal git repo
 
     ![](./images/github4001.png)
 
-9. Type `PERSONAL_ACCESS_TOKEN_GITHUB` for the name of the secret, and paste the token you copied from PAT section
+9. Type `PERSONAL_ACCESS_TOKEN_GITHUB` for the name of the secret, and paste the token you copied from PAT section and click **Add Secret**.
 
     > **Important:** The name for this secret must be `PERSONAL_ACCESS_TOKEN_GITHUB`
 
@@ -215,21 +194,6 @@ You are going to create PAT to allow your code access your personal git repo
 
 From this section, you'll add the SP information to your repo. The SP information will be used during the Github Actions.
 
-
-```json
-{
-	"clientId": "YOUR_APP_ID",
-	"clientSecret": "YOUR_CLIENT_SECRET",
-	"subscriptionId": "SUB_ID",
-	"tenantId": "TENANT_ID",
-	"activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-	"resourceManagerEndpointUrl": "https://management.azure.com/",
-	"activeDirectoryGraphResourceId": "https://graph.windows.net/",
-	"sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-	"galleryEndpointUrl": "https://gallery.azure.com/",
-	"managementEndpointUrl": "https://management.core.windows.net/"
-}
-```
 
 1. Go back to your 'MLOpsTemplate' repo where your forked from microsoft/MLOpsTemplate
 
@@ -247,7 +211,9 @@ From this section, you'll add the SP information to your repo. The SP informatio
 
     ![](./images/github4001.png)
 
-4. Type `AZURE_SERVICE_PRINCIPAL` for the name of the secret, and paste your SP json definition:
+4. Type `AZURE_SERVICE_PRINCIPAL` for the name of the secret.
+5. Now, locate the AZURE_SERVICE_PRINCIPAL.txt file in desktop under your VM and open it.
+6. Copy the whole SP json definition and paste it in Github under **value box** and click **Add Secret**.
 
     > **Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`
 
