@@ -2,7 +2,7 @@
 # Part 2: Use cloud scale compute to run, deploy and manage ML experiment with Azure ML
 
 ## Pre-requisites
-- Complete [Part 0](part_0.md), [Part 1](part_1.md)
+- Complete [Part 0], [Part 1]
 - Run each module feature_engineering, ml_training and evaluating successfully in local mode
 - Have Azure ML workspace setup with a Compute Cluster named ```cpu-cluster```
 
