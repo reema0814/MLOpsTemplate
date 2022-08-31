@@ -2,7 +2,7 @@
 # Part 3: Use GitHub for Version Control and Automation
 
 ## Pre-requisites
-- Complete [Part 0](part_0.md), [Part 1](part_1.md), [Part 2](part_2.md)
+- Complete [Part 0], [Part 1], [Part 2]
 
 ## Summary
 Your team wants to learn how to automate and orchestrate common tasks such as environment setup, training, testing using GitHub Actions. To accomplish this, the following steps will be performed:
@@ -11,9 +11,15 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 
 ## Steps
 1. Move to your dev branch you created in step 1 if you are not already there.
+    > - Navigate to the repo if not already there ```cd MLOpsTemplate``` with the proper path to the cloned location.
+    
+    > **Action Items:** 
+    > - If you are in the workshop folder, Run the following command to switch back files until you reach your repo i.e. MLOpsTemplate
+    
+    ```bash
+    cd ..
+    ```
 
-    > Action Items: 
-    > - Navigate to the repo if not already there by running ```cd PATH_TO_REPO``` with the proper path to the cloned location.
     > - Run following command to check out your "yourname-dev"
         
     ```bash
@@ -22,11 +28,17 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 
 2. Create an automated unit test task that will be triggered by pushing the code to your development/feature branch. Let's use the ```Feature_Engineering``` module as the automated unit test to run to make sure the module performs correctly.
 
-    > Action Items: Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
-    > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder
+    > **Action Items:** Update the `workshop_unit_test.yml` file with your secret credentials. Replace the resource group, workspace and location with your specific details.
+    > - Locate the file named `workshop_unit_test.yml` in the `.github/workflows` folder by running the following command:
+    
+    ```bash
+    cd .github/workflows/
+    nano workshop_unit_test.yml
+    ```
     > - Make the following updates to the file: 
     > - Update the secret name by replacing the ```AZURE_SERVICE_PRINCIPAL``` to match the GitHub secret name for your Service Principal that was created in Part 0. (If you followed the naming convention in part 0, there is no need to update this as your secret name should be ```AZURE_SERVICE_PRINCIPAL```.)
     > - Update resource group name, workspace name, location with the specific names of your resource group, workspace, and location created in Part 0.
+ > **Note:** You can use the arrow keys to move around in the file. Press the "CTRL + X" keys to close the file. You will be prompted to save your changes. Press the "y" key to save your changes and then press enter to exit.
 
 3. Next, review the contents in the ```workshop_unit_test.yml``` file to understand the steps and how it is being triggered.
 
@@ -36,11 +48,11 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
     -  Review the job starting at the `jobs:` section that has been created already and does the following steps:
         - Checks out the repo
         - Logs into Azure
-        - Creates an AML job to run feature engineering module using the [custom action](../../../.github/actions/aml-job-create/action.yaml) and the existing [feature engineering job file](../core/data_engineering/feature_engineering.yml)
+        - Creates an AML job to run feature engineering module using the [custom action] and the existing [feature engineering job file]
 
 4. Now that the necessary changes have been made, the changes can be pushed to your feature branch which will trigger the feature_engineering_unit_test workflow.
 
-    > Action Items:
+    > **Action Items:**
     > - Run the following commands in sequence to stage changes, commit them, and then push them to your repo:
     1. ```bash 
         git status
@@ -54,10 +66,14 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
     4. ```bash
         git push origin yourname-dev
         ```
-        > Note: `git status` shows the files that have been modified. It is useful for seeing the latest status of the files, but isn't necessary to commit changes.
-
-    > - Check to see if the workflow was properly triggered by going to your github repo and selecting the Actions tab.
-
+  > **Note:** After running the above command, credentials of your Github account might be asked for authentication so for **username** just enter your **Github username** and for **password** enter the **PERSONAL ACCESS TOKEN (PAT)** that you generated in **part 0**.
+  
+  > **Note:** `git status` shows the files that have been modified. It is useful for seeing the latest status of the files, but isn't necessary to commit changes.
+   
+ > - Check to see if the workflow was properly triggered by going to your github repo and selecting the **Actions tab**.
+ 
+ >  **Note:** If the worflow isn't triggered, you can run a workflow under yourname-dev branch under feature_engineering.yml in Action tab.
+   
 ## The CI CD Workflow is shown below:
 ![pipeline](images/part3cicd.png)
 
@@ -72,4 +88,3 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
 - [GitHub Actions Workflow Triggers](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 
 
-## [Go to Part 4](part_4.md)

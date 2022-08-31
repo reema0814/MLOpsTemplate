@@ -1,0 +1,36 @@
+[
+    {
+      "Name": "MLOps Template",
+      "Language": "English",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/smseerat/MLOpsTemplate/main/GettingStarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_0.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_1.md",
+          "Order": 3
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_2.md",
+          "Order": 4
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_3.md",
+          "Order": 5
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_4.md",
+          "Order": 6
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/microsoft/MLOpsTemplate/main/src/workshop/documents/part_5.md",
+          "Order": 7
+        }
+      ]
+    }
+  ]
