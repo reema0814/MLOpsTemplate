@@ -60,9 +60,9 @@ To accomplish these goals, you will perform the following:
 10. Create a pipeline that runs the feature_engineering, training and evaluation in one workflow.
    > **Action Items:** Run the pipeline, by running the following code snippet.
    
-      ```bash 
-        az ml job create -f core/pipelines/training_pipeline.yml 
-      ```
+  ```bash 
+      az ml job create -f core/pipelines/training_pipeline.yml 
+  ```
    > - Go to the run detail at Azure ML studio and observe the relationship graph among the modules. (See chart below as well.)
 
 11. Discuss this question: Why should we run the modules both individually and together in a pipeline? 
@@ -89,9 +89,10 @@ To accomplish these goals, you will perform the following:
  15. Test the deployed service with mock-up data from scoring_test_request.json
   
    > **Action Items:** Run the following code snippet and replace YOUR_ENDPOINT_NAME with **Endpoint Name** that you saved in the previous step.
-      ```bash 
-        az ml online-endpoint invoke -n YOUR_ENDPOINT_NAME --deployment green --request-file core/scoring/scoring_test_request.json 
-      ``` 
+   
+   ```bash 
+      az ml online-endpoint invoke -n YOUR_ENDPOINT_NAME --deployment green --request-file core/scoring/scoring_test_request.json 
+   ``` 
    > - Observe the returned scores from the endpoint evaluation.
 
 ### The entire training pipeline is illustrated with this diagram
