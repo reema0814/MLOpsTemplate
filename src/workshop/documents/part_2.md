@@ -74,15 +74,17 @@ To accomplish these goals, you will perform the following:
    > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and Click **Authenticate** and Press Ctrl+S to save change.
    > Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
    > -  Create your endpoint by running the following command:
-      ```bash 
-        az ml online-endpoint create --file core/scoring/endpoint.yml 
-      ```
+   
+   ```bash 
+      az ml online-endpoint create --file core/scoring/endpoint.yml 
+   ```
    > **Note:** Wait for 15-20 mins. 
    
   13. Create a green deployment by running the following command:
-      ```bash 
-        az ml online-deployment create --file core/scoring/deployment.yml 
-      ```
+  
+   ```bash 
+      az ml online-deployment create --file core/scoring/deployment.yml 
+   ```
  > **Note:** At this point, it takes about 10 minutes to create a green deployment.
  
  14. Copy the **Endpoint Name** that is generated as the output of this command and save it in notepad as it will be used in next command.
