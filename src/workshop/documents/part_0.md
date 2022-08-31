@@ -251,6 +251,6 @@ From this section, you'll add the SP information to your repo. The SP informatio
 
     > **Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`
 
-    ![](./images/github4002.png)
+    ![](./images/github4002-upd.png)
 
 
