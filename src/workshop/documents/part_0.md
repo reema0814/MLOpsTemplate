@@ -212,7 +212,7 @@ From this section, you'll add the SP information to your repo. The SP informatio
     ![](./images/github4001.png)
 
 4. Type `AZURE_SERVICE_PRINCIPAL` for the name of the secret.
-5. Now, locate the AZURE_SERVICE_PRINCIPAL.txt file in desktop under your VM and open it.
+5. Now, locate the AZURE_SERVICE_PRINCIPAL.txt file in desktop under your LabVM and open it.
 6. Copy the whole SP json definition and paste it in Github under **value box** and click **Add Secret**.
 
     > **Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`
