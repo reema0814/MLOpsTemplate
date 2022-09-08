@@ -92,6 +92,7 @@ To illustrate how the process works, the notebook was refactored into a feature 
 	  --prep_data data \
 	  --input_file_name final_df.parquet \
 	  --model_folder data
+	  
 	  ```
 	  
 7. Review the refactored ML training logic at ```ml_evaluating.py``` module under evaluating folder. 
