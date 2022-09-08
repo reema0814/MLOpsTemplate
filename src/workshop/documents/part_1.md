@@ -87,13 +87,14 @@ To illustrate how the process works, the notebook was refactored into a feature 
         - Prints out MAPE, R2 and RMSE metrics
         - Writes the train model file to output folder
         > **Action Item:** Run the following code snippet.
-         ```bash 
-          python core/training/ml_training.py \
-	  --prep_data data \
-	  --input_file_name final_df.parquet \
-	  --model_folder data
-	  
-	  ```
+
+```bash 
+  python core/training/ml_training.py \
+  --prep_data data \
+  --input_file_name final_df.parquet \
+  --model_folder data
+
+```
 	  
 7. Review the refactored ML training logic at ```ml_evaluating.py``` module under evaluating folder. 
     - The module performs the following:
