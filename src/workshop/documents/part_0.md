@@ -21,7 +21,7 @@
     ![](./images/run_mlopsworkshop_azcli009.png)
     
   5. Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
-   > Note: You will have the same repository (`MLOpsTemplate`) under your Github account name.
+   > **Note:** You will have the same repository (`MLOpsTemplate`) under your Github account name.
    > Leave the tab open and **do not** close it yet. You will come back to your repository.
 
 ## Task 2. Choose your development environment
@@ -29,7 +29,7 @@ In this step you will clone the above forked repository into a development envir
 
 ###  Using Compute Instance in AML
 
-1. In the Azure portal, go to *mlops-rg-xxxx* resource group and open **aml-xxxx** machine learning workspace.
+1. In the Azure portal, go to ***mlops-rg-xxxx*** resource group and open **aml-xxxx** machine learning workspace.
 
 2. In **aml-xxxx** machine learning workspace, click on **Launch Studio** button.
 
