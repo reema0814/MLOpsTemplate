@@ -78,7 +78,7 @@ To accomplish these goals, you will perform the following:
    ```bash 
       az ml online-endpoint create --file core/scoring/endpoint.yml 
    ```
-   > **Note:** Wait for 15-20 mins until all the above jobs got executed completely. You can also check the job status by navigating to Jobs under Assets.
+   > **Note:** All the above jobs will take up to 20 minutes to get executed completely. You can also check the job status by navigating to Jobs under Assets. **Wait until the completion of all the jobs and then only move to next step.**
    
    ![Jobs status](images/upd-jobs.png)
  
