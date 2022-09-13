@@ -22,7 +22,7 @@ To accomplish these goals, you will perform the following:
 1. In Azure machine learning workspace studio, go to **Compute** under **Manage** and click **Compute clusters**.
 2. Click **+New**.
 3. Under **Create compute cluster**, on **Virtual Machine tab** leave the default values and click **Next**.
-4. Give compute name as `cpu-cluster` and click **Create**.
+4. Under **Advanced settings** tab, give compute name as `cpu-cluster` and click **Create**.
 
 5. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
    > **Action Item:** Run the following code snippet.
@@ -30,7 +30,7 @@ To accomplish these goals, you will perform the following:
     cd src/workshop
     ```
 6. Set defaults values to configure your resource group and workspace.
-   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with *mlops-rg-xxxx* and **aml-xxxx** respectively.
+   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-xxxx*** and **aml-xxxx** respectively.
     ```bash 
     az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
     ```
@@ -69,16 +69,19 @@ To accomplish these goals, you will perform the following:
 
 12. Deploy to Azure ML Managed Online Endpoint by following the steps below:
    > **Action Items:**
-   > - In AML Studio, under Author navigate to the Notebooks > MLOpsTemplate > src > workshop > core > scoring
-   > - Select endpoint.yml and deployment.yml under scoring folder
+   > - In AML Studio, under Author navigate to the **Notebooks > MLOpsTemplate > src > workshop > core > scoring**
+   > - Select **endpoint.yml** and **deployment.yml** under scoring folder
    > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and Click **Authenticate** and Press Ctrl+S to save change.
-   > Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
-   > -  Create your endpoint by running the following command:
+   > - Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
+   > -  Move back to the notebook Terminal and create your endpoint by running the following command:
    
    ```bash 
       az ml online-endpoint create --file core/scoring/endpoint.yml 
    ```
-   > **Note:** Wait for 15-20 mins. 
+   > **Note:** Wait for 15-20 mins until all the above jobs got executed completely. You can also check the job status by navigating to Jobs under Assets.
+   
+   ![Jobs status](images/upd-jobs.png)
+ 
    
   13. Create a green deployment by running the following command:
   
