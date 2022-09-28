@@ -17,7 +17,7 @@
   
 2.	Enter both the username and password, and click on Sign in.
 
-    ![](./images/github-01.png) 
+  ![](./images/github-01.png) 
 
 3.	GitHub will ask for Device Verification.
  
@@ -25,19 +25,19 @@
 
 5.	Once you sign in, check for the latest email from GitHub. It could be in either Focused or Other section of the Inbox.
 
-    ![](./images/github-02.png) 
+  ![](./images/github-02.png) 
  
 6.	Here, I can see the latest mail from GitHub is under Other section. So open the mail and copy the Verification code.
 
-    ![](./images/github-03.png) 
+  ![](./images/github-03.png) 
 
 7.	Paste the verification code in Device verification code field. As soon as you paste the code, it will go to verifying state.
 
-    ![](./images/github-04.png)  
+  ![](./images/github-04.png)  
 
 8.	After providing the code you will be successfully logged in to Github as shown below.
 
-    ![](./images/github-05.png)
+  ![](./images/github-05.png)
 
 9. After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
   ![](./images/run_mlopsworkshop_azcli009.png)
