@@ -13,7 +13,7 @@
 
   1. From the new browser tab, Sign in to the [Github](https://github.com/login) using the **GitHub Credentials** provided under the **Environment details > Licenses** tab.
  
-    ![](./images/github-06.png) 
+   ![](./images/github-06.png) 
   
 2.	Enter both the username and password, and click on Sign in.
 
@@ -44,6 +44,8 @@
 
 10. Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
 
+    ![](./images/github-07.png) 
+   
 > **Note:** You will have the same repository (`MLOpsTemplate`) under your Github account name.
    > Leave the tab open and **do not** close it yet. You will come back to your repository.
 
