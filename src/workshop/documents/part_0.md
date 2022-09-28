@@ -25,7 +25,7 @@
 
 5.	Once you sign in, check for the latest email from GitHub. It could be in either Focused or Other section of the Inbox.
 
-  ![](./images/github-02.png) 
+   ![](./images/github-02.png) 
  
 6.	Here, I can see the latest mail from GitHub is under Other section. So open the mail and copy the Verification code.
 
