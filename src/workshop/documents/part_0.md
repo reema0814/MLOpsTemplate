@@ -11,17 +11,40 @@
 
 ## Task 1. Setup Github Account and Settings
 
-  1. From the new browser tab, Sign in to the [Github](https://github.com/login) using the **GitHub Credentials** provided under the **Environment details->Licenses** tab.
-       
-  2. If prompted with **Device Verification** dialog box, sign in to [Outlook](https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1612964287&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d7fc62ab0-70f6-eaeb-5aff-cfbc63845381&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015) using the lab credentials. 
-   
-  3. Get the code from Outlook Inbox and click on **Verify**  in the **Device Verification** dialog box. After providing the code you will be successfully logged in to Github.
+  1. From the new browser tab, Sign in to the [Github](https://github.com/login) using the **GitHub Credentials** provided under the **Environment details > Licenses** tab.
+ 
+  ![](./images/github-06.png) 
+  
+2.	Enter both the username and password, and click on Sign in.
 
-  4. After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
-    ![](./images/run_mlopsworkshop_azcli009.png)
-    
-  5. Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
-   > **Note:** You will have the same repository (`MLOpsTemplate`) under your Github account name.
+  ![](./images/github-01.png) 
+
+3.	GitHub will ask for Device Verification.
+ 
+4.	To get the verification code, browse to https://outlook.live.com/owa/ and sign in using same GitHub user credentials that you used earlier in step 2.
+
+5.	Once you sign in, check for the latest email from GitHub. It could be in either Focused or Other section of the Inbox.
+
+  ![](./images/github-02.png) 
+ 
+6.	Here, I can see the latest mail from GitHub is under Other section. So open the mail and copy the Verification code.
+
+  ![](./images/github-03.png) 
+
+7.	Paste the verification code in Device verification code field. As soon as you paste the code, it will go to verifying state.
+
+  ![](./images/github-04.png)  
+
+8.	After providing the code you will be successfully logged in to Github as shown below.
+
+  ![](./images/github-05.png)
+
+9. After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
+  ![](./images/run_mlopsworkshop_azcli009.png)
+
+10. Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
+
+> **Note:** You will have the same repository (`MLOpsTemplate`) under your Github account name.
    > Leave the tab open and **do not** close it yet. You will come back to your repository.
 
 ## Task 2. Choose your development environment
