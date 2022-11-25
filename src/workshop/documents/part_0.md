@@ -178,9 +178,9 @@ You are going to create PAT to allow your code access your personal git repo
 
     ![](./images/github4004.png)
 
-3. __Click__ '_Personal access token_' and __click__ '_Generate new token_'
+3. __Click__ on '_Personal access tokens_' (1)> '_Tokens (classic)_' (2) and then __click__ on '_Generate new token_' (3)> '_Generate new token (classic)_' (4).
 
-    ![](./images/github4005.png)
+    ![](./images/mlops-p0.png)
 
 4. Check for '_repo_' and '_workflow_' for the scope and then __click__ '_Generate Token_' at the bottom of your screen
 
@@ -198,7 +198,7 @@ You are going to create PAT to allow your code access your personal git repo
         https://github.com/{YOURACCOUNT}}/MLOpsTemplate
         ```
 
-7. From your repo __click__ '_Setting_'
+7. From your repo __click__ '_Settings_'
 
     ![](./images/github4000.png)
 
