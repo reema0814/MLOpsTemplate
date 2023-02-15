@@ -102,7 +102,7 @@ git config --global push.default simple
         ```
         
 > **Note:** You can find the __Resource Group Name, Azure Machine Learning Worskspace Name__ and the __Subscription ID__ from Azure portal.
-> ![](./images/run_mlopsworkshop_azcli010.png)
+> ![](./images/mlpos-img1.png)
 
    - Use the code and follow the instruction to finish the login.
    
