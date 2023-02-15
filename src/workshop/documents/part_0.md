@@ -40,7 +40,7 @@
   ![](./images/github-05.png)
 
 9. After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
-  ![](./images/run_mlopsworkshop_azcli009.png)
+  ![](./images/mlpos-img2.png)
 
 10. Make sure to **uncheck** the `copy the main branch only option` and click `Create Fork`. 
 
@@ -58,11 +58,11 @@ In this step you will clone the above forked repository into a development envir
 
 2. In **aml-xxxx** machine learning workspace, click on **Launch Studio** button.
 
-3. Go to __Compute__ > __Compute Instance__
+3. Go to __Compute__ > __Compute Instance__.
 
-4. Click new __Terminal link__
+4. Click new __Terminal link__.
 
-5. Clone __your__ 'MLOpsTemplate' repo in the Terminal of Compute Instance
+5. Clone __your__ 'MLOpsTemplate' repo in the Terminal of Compute Instance.
 
     - Make sure you have forked the repo to your repository
     - Before you run following command, update the _{YOURGITHUBACCOUNT}_ part with your GitHub handle (look at your browser URL for the repo you forked earlier to get this information)
@@ -76,13 +76,13 @@ In this step you will clone the above forked repository into a development envir
 
 ![](./images/run_mlopsworkshop_azcli004.png)
 
-> **IMPORTANT:** setup Git credentials helper (to avoid typing your username / password every time you push some changes)
+> **IMPORTANT:** setup Git credentials helper (to avoid typing your username / password every time you push some changes).
 
 ```bash
 git config --global credential.helper store
 ```
 
-> **IMPORTANT:** Git push commands setup (replace with the email linked to your github account + specify your full name)
+> **IMPORTANT:** Git push commands setup (replace with the email linked to your github account + specify your full name).
 
 ```bash
 git config --global user.email "my_email@my_company.com"
@@ -90,9 +90,9 @@ git config --global user.name "Firstname Lastname"
 git config --global push.default simple
 ```
 
-6. Generate and register data for the workshop
+6. Generate and register data for the workshop.
 
-    - Update arguments "_NAMES_ and _ID_" accordingly and then run following commands from the Terminal
+    - Update arguments "_NAMES_ and _ID_" accordingly and then run following commands from the Terminal.
 
         ```bash
         cd ./MLOpsTemplate/src/workshop
@@ -109,7 +109,7 @@ git config --global push.default simple
    > **Note:** You need to login in and be authenticated to use the `azure cross platform CLI`.
         After copy the __code__ and go to the link, [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). 
 
-7. Install az ml CLI v2
+7. Install az ml CLI v2.
     - Run the following command to see the `az extension`
         ```bash 
         az extension list
@@ -127,7 +127,7 @@ git config --global push.default simple
         az extension add -n ml -y --version 2.2.1
         ```
 
-8. Setup az cli
+8. Setup az cli.
     - Run the following command from the Terminal:
         ```bash
         az login
@@ -143,7 +143,7 @@ git config --global push.default simple
         
 
 
-9. Configure the subscription and Azure Machine Learning Workspace
+9. Configure the subscription and Azure Machine Learning Workspace.
     ```bash
     az account set -s "<YOUR_SUBSCRIPTION_NAME>"
     az configure --defaults group="<YOUR_RG_NAME>" workspace="<YOUR_AML_NAME>" location="<YOUR_REGION_NAME>"
@@ -162,55 +162,55 @@ git config --global push.default simple
 ## Task 3. Configure secret in your Github account
 
 The last two tasks include:
-   - Creating a Personal Access Token (PAT) in Github
-   - Adding a Service Principal (SP) to your forked repository in Github
+   - Creating a Personal Access Token (PAT) in Github.
+   - Adding a Service Principal (SP) to your forked repository in Github.
 
 
 ### 3.1 Create PAT (Personal Access Token)
 
-You are going to create PAT to allow your code access your personal git repo
+You are going to create PAT to allow your code access your personal git repo.
 
-1. To make PAT, you need to go to Settings of your account, NOT repo setting
+1. To make PAT, you need to go to Settings of your account, **NOT** repo setting.
 
-    ![](./images/github4003.png)
+    ![](./images/mlpos-img3.png)
 
-2. From the setting, find and __click__ '_<> Developer settings_' menu at the bottom left conner of your screen
+2. From the setting, find and __click__ '_<> Developer settings_' menu at the bottom left conner of your screen.
 
-    ![](./images/github4004.png)
+    ![](./images/mlpos-img4.png)
 
 3. __Click__ on '_Personal access tokens_' (1)> '_Tokens (classic)_' (2) and then __click__ on '_Generate new token_' (3)> '_Generate new token (classic)_' (4).
 
-    ![](./images/mlops-p0.png)
+    ![](./images/mlpos-img5.png)
 
-4. Check for '_repo_' and '_workflow_' for the scope and then __click__ '_Generate Token_' at the bottom of your screen
+4. Enter a **Note** and check for '_repo_' and '_workflow_' for the scope and then __click__ '_Generate Token_' at the bottom of your screen.
 
-    ![](./images/github4006.png)
+    ![](./images/mlpos-img6.png)
 
 5. You'll see the token. Make sure you copy and keep it safe. 
 
-    ![](./images/github4007.png)
+    ![](./images/mlpos-img7.png)
 
-6. Now you're going to add the token to your repo, Go back to your 'MLOpsTemplate' repo where your forked from microsoft/MLOpsTemplate
+6. Now you're going to add the token to your repo, Go back to your 'MLOpsTemplate' repo where your forked from microsoft/MLOpsTemplate.
 
-    - The url of your repo will looks like this
+    - The url of your repo will looks like this.
 
         ```text
         https://github.com/{YOURACCOUNT}}/MLOpsTemplate
         ```
 
-7. From your repo __click__ '_Settings_'
+7. From your repo __click__ '_Settings_'.
 
-    ![](./images/github4000.png)
+    ![](./images/mlpos-img8.png)
 
-8. Find a menu '_Secrets_' on the left side of menu, and __click__ 'Actions'. After that __Click__ 'New repository secret'
+8. Find a menu '_Secrets_' on the left side of menu, and __click__ 'Actions'. After that __Click__ 'New repository secret'.
 
-    ![](./images/github4001.png)
+    ![](./images/mlpos-img9.png)
 
 9. Type `PERSONAL_ACCESS_TOKEN_GITHUB` for the name of the secret, and paste the token you copied from PAT section and click **Add Secret**.
 
-    > **Important:** The name for this secret must be `PERSONAL_ACCESS_TOKEN_GITHUB`
+    > **Important:** The name for this secret must be `PERSONAL_ACCESS_TOKEN_GITHUB`.
 
-    ![](./images/github4008.png)
+    ![](./images/mlpos-img10.png)
 
 
 
@@ -220,28 +220,28 @@ You are going to create PAT to allow your code access your personal git repo
 From this section, you'll add the SP information to your repo. The SP information will be used during the Github Actions.
 
 
-1. Go back to your 'MLOpsTemplate' repo where your forked from microsoft/MLOpsTemplate
+1. Go back to your 'MLOpsTemplate' repo where your forked from microsoft/MLOpsTemplate.
 
-    - The url of your repo will looks like this
+    - The url of your repo will looks like this.
 
         ```text
         https://github.com/{YOURACCOUNT}}/MLOpsTemplate
         ```
 
-2. From your repo __click__ '_Setting_'
+2. From your repo __click__ '_Setting_'.
 
-    ![](./images/github4000.png)
+    ![](./images/mlpos-img8.png)
 
 3. Find a menu '_Secrets_' on the left side of menu, and __click__ 'Actions'. After that __Click__ 'New repository secret'
 
-    ![](./images/github4001.png)
+    ![](./images/mlpos-img9.png)
 
 4. Type `AZURE_SERVICE_PRINCIPAL` for the name of the secret.
 5. Now, locate the AZURE_SERVICE_PRINCIPAL.txt file in desktop under your LabVM and open it.
 6. Copy the whole SP json definition and paste it in Github under **value box** and click **Add Secret**.
 
-    > **Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`
+    > **Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`.
 
-    ![](./images/github4002-upd.png)
+    ![](./images/mlpos-img11.png)
 
 
