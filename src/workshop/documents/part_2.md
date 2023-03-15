@@ -69,9 +69,9 @@ To accomplish these goals, you will perform the following:
 
 12. Deploy to Azure ML Managed Online Endpoint by following the steps below:
    > **Action Items:**
-   > - In AML Studio, under Author navigate to the **Notebooks > MLOpsTemplate > src > workshop > core > scoring**
+   > - In AML Studio, under Authoring navigate to the **Notebooks > MLOpsTemplate > src > workshop > core > scoring**
    > - Select **endpoint.yml** and **deployment.yml** under scoring folder
-   > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and Click **Authenticate** and Press Ctrl+S to save change.
+   > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and press Ctrl+S to save change (If prompted for authentication first click **Authenticate** then press Ctrl+S.)
    > - Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
    > -  Move back to the notebook Terminal and create your endpoint by running the following command:
    
