@@ -54,9 +54,9 @@ In this step you will clone the above forked repository into a development envir
 
 ###  Using Compute Instance in AML
 
-1. In the Azure portal, go to ***mlops-rg-xxxx*** resource group and open **aml-xxxx** machine learning workspace.
+1. In the Azure portal, go to ***mlops-rg-<inject key="Deployment ID"></inject>*** resource group and open **aml-<inject key="Deployment ID"></inject>** machine learning workspace.
 
-2. In **aml-xxxx** machine learning workspace, click on **Launch Studio** button.
+2. In **aml-<inject key="Deployment ID"></inject>** machine learning workspace, click on **Launch Studio** button.
 
 3. Go to __Compute__ > __Compute Instance__.
 
