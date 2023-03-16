@@ -30,7 +30,7 @@ To accomplish these goals, you will perform the following:
     cd src/workshop
     ```
 6. Set defaults values to configure your resource group and workspace.
-   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-xxxx*** and **aml-xxxx** respectively.
+   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-<inject key="Deployment ID"></inject>*** and **aml-<inject key="Deployment ID"></inject>** respectively.
     ```bash 
     az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
     ```
