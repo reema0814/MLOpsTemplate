@@ -21,16 +21,15 @@ To accomplish these goals, you will perform the following:
 ## Task 1:
 1. In Azure machine learning workspace studio, go to **Compute** under **Manage** and click **Compute clusters**.
 2. Click **+New**.
-3. Under **Create compute cluster**, on **Virtual Machine tab** leave the default values and click **Next**.
-4. Under **Advanced settings** tab, give compute name as `cpu-cluster` and click **Create**.
-
+3. Under **Create compute cluster**, on Virtual Machine tab leave the default values and click **Next**.
+4. Under **Advanced settings**, give compute name as `cpu-cluster` leave the default values and **Create**.
 5. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
    > **Action Item:** Run the following code snippet.
     ```bash 
     cd src/workshop
     ```
 6. Set defaults values to configure your resource group and workspace.
-   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-xxxx*** and **aml-xxxx** respectively.
+   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-<inject key="Deployment ID"></inject>*** and **aml-<inject key="Deployment ID"></inject>** respectively.
     ```bash 
     az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
     ```
