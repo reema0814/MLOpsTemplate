@@ -97,7 +97,7 @@ Now let's configure the GitHub Actions workflow file that controls the CD proces
  > **Action Items:**   
  > - If you have no changes in integration, first commit a simple change in your own dev branch by adding a comment to the score.py script for instance.
  > - Bring this over to integration via a Pull Request from your dev branch to integration.
- > - Go to the GitHub UI under 'Actions', and select 'workshop_ci', and trigger it to run now on your own development branch.
+ > - Go to the GitHub UI under 'Actions', and select 'workshop-ci', and trigger it to run now on your own development branch.
  > - Once the CI workflow has completed, a Pull Request from integration to main will be automatically created.
  > - Observe the status of the Pull Request to main: it should have triggered the CD run (based on the workshop_cd.yml triggers definition), and there should be a rule that prevents merging the Pull Request until the CD workflow completes succesfully.
 
