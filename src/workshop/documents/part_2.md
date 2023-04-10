@@ -20,86 +20,113 @@ To accomplish these goals, you will perform the following:
 
 ## Task 1:
 1. In Azure machine learning workspace studio, go to **Compute** under **Manage** and click **Compute clusters**.
-2. Click **+New**.
-3. Under **Create compute cluster**, on Virtual Machine tab leave the default values and click **Next**.
-4. Under **Advanced settings**, give compute name as `cpu-cluster` leave the default values and **Create**.
-5. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
-   > **Action Item:** Run the following code snippet.
-    ```bash 
-    cd src/workshop
-    ```
-6. Set defaults values to configure your resource group and workspace.
-   > **Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-<inject key="Deployment ID"></inject>*** and **aml<inject key="Deployment ID"></inject>** respectively.
-    ```bash 
-    az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
-    ```
 
-7. Run the ```feature_engineering.py``` module under the ```data_engineering``` folder by following the steps below:
- > **Action Items:** Run the following code snippet:
-      ```bash 
-        az ml job create -f core/data_engineering/feature_engineering.yml 
-      ```
-   > - Go to Azure ML Studio and locate the run detail for this experiment.
+1. Click **+New**.
 
-8. Run the ```ml_training.py``` module under the ```training``` folder by following the steps below:
-   > **Action Items:** Run the following code snippet:
-      ```bash 
-        az ml job create -f core/training/ml_training.yml 
-      ```
-   > - Go to Azure ML Studio and locate the run detail for this experiment.
+1. Under **Create compute cluster**, on Virtual Machine tab leave the default values and click **Next**.
 
-9. Run the ```ml_evaluating.py``` module under the ```evaluating``` folder by following the steps below:
-   > **Action Items:** Run the following code snippet:
+1. Under **Advanced settings**, give compute name as `cpu-cluster` leave the default values and **Create**.
 
-      ```bash 
-        az ml job create -f core/evaluating/ml_evaluating.yml 
-      ```
-   > - Go to Azure ML Studio and locate the run detail for this experiment. Observe the ML metrics and how the model was logged to Azure ML's model registry.
-
-10. Create a pipeline that runs the feature_engineering, training and evaluation in one workflow.
-   > **Action Items:** Run the pipeline, by running the following code snippet.
+1. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
    
-  ```bash 
-      az ml job create -f core/pipelines/training_pipeline.yml 
-  ```
-   > - Go to the run detail at Azure ML studio and observe the relationship graph among the modules. (See chart below as well.)
+   >**Action Item:** Run the following code snippet.
 
-11. Discuss this question: Why should we run the modules both individually and together in a pipeline? 
+   ```bash 
+   cd src/workshop
+   ```
+1. Set defaults values to configure your resource group and workspace.
+   
+   >**Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-<inject key="Deployment ID"></inject>*** and **aml<inject key="Deployment ID"></inject>** respectively.
+    
+   ```bash 
+   az configure --defaults group=YOUR_RESOURCE_GROUP workspace=YOUR_WORKSPACE
+   ```
 
-12. Deploy to Azure ML Managed Online Endpoint by following the steps below:
-   > **Action Items:**
-   > - In AML Studio, under Authoring navigate to the **Notebooks > MLOpsTemplate > src > workshop > core > scoring**
-   > - Select **endpoint.yml** and **deployment.yml** under scoring folder
-   > - Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and press Ctrl+S to save change (If prompted for authentication first click **Authenticate** then press Ctrl+S.)
-   > - Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
+1. Run the ```feature_engineering.py``` module under the ```data_engineering``` folder by following the steps below:
+ 
+   >**Action Items:** Run the following code snippet:
+   
+   ```bash 
+   az ml job create -f core/data_engineering/feature_engineering.yml 
+   ```
+   
+   >- Go to Azure ML Studio and locate the run detail for this experiment.
+
+1. Run the ```ml_training.py``` module under the ```training``` folder by following the steps below:
+   
+   >**Action Items:** Run the following code snippet:
+      
+   ```bash 
+   az ml job create -f core/training/ml_training.yml 
+   ```
+   
+   >- Go to Azure ML Studio and locate the run detail for this experiment.
+
+1. Run the ```ml_evaluating.py``` module under the ```evaluating``` folder by following the steps below:
+   
+   >**Action Items:** Run the following code snippet:
+
+   ```bash 
+   az ml job create -f core/evaluating/ml_evaluating.yml 
+   ```
+   
+   >- Go to Azure ML Studio and locate the run detail for this experiment. Observe the ML metrics and how the model was logged to Azure ML's model registry.
+
+1. Create a pipeline that runs the feature_engineering, training and evaluation in one workflow.
+   
+   >**Action Items:** Run the pipeline, by running the following code snippet.
+   
+   ```bash 
+   az ml job create -f core/pipelines/training_pipeline.yml 
+   ```
+   
+   >- Go to the run detail at Azure ML studio and observe the relationship graph among the modules. (See chart below as well.)
+
+1. Discuss this question: Why should we run the modules both individually and together in a pipeline? 
+
+1. Deploy to Azure ML Managed Online Endpoint by following the steps below:
+ 
+   >**Action Items:**
+   
+   >- In AML Studio, under Authoring navigate to the **Notebooks > MLOpsTemplate > src > workshop > core > scoring**
+   
+   >- Select **endpoint.yml** and **deployment.yml** under scoring folder
+   
+   >- Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and press Ctrl+S to save change (If prompted for authentication first click **Authenticate** then press Ctrl+S.)
+   
+   >- Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
+   
    > -  Move back to the notebook Terminal and create your endpoint by running the following command:
    
    ```bash 
-      az ml online-endpoint create --file core/scoring/endpoint.yml 
+   az ml online-endpoint create --file core/scoring/endpoint.yml 
    ```
-   > **Note:** All the above jobs will take up to 20 minutes to get executed completely. You can also check the job status by navigating to Jobs under Assets. **Wait until the completion of all the jobs and then only move to next step.**
+   
+   >**Note:** All the above jobs will take up to 20 minutes to get executed completely. You can also check the job status by navigating to Jobs under Assets. **Wait until the completion of all the jobs and then only move to next step.**
    
    ![Jobs status](images/upd-jobs.png)
  
-   
-  13. Create a green deployment by running the following command:
+1. Create a green deployment by running the following command:
   
    ```bash 
-      az ml online-deployment create --file core/scoring/deployment.yml 
+   az ml online-deployment create --file core/scoring/deployment.yml 
    ```
- > **Note:** At this point, it takes about 10 minutes to create a green deployment.
+
+   >**Note:** At this point, it takes about 10 minutes to create a green deployment.
  
- 14. Copy the **Endpoint Name** that is generated as the output of this command and save it in notepad as it will be used in next command.
- 15. Test the deployed service with mock-up data from scoring_test_request.json
+ 1. Copy the **Endpoint Name** that is generated as the output of this command and save it in notepad as it will be used in next command.
+ 
+ 1. Test the deployed service with mock-up data from scoring_test_request.json
   
-   > **Action Items:** Run the following code snippet and replace YOUR_ENDPOINT_NAME with **Endpoint Name** that you saved in the previous step.
+    >**Action Items:** Run the following code snippet and replace YOUR_ENDPOINT_NAME with **Endpoint Name** that you saved in the previous step.
    
-   ```bash 
-      az ml online-endpoint invoke -n YOUR_ENDPOINT_NAME --deployment green --request-file core/scoring/scoring_test_request.json 
-   ``` 
-   > - Observe the returned scores from the endpoint evaluation.
+    ```bash 
+    az ml online-endpoint invoke -n YOUR_ENDPOINT_NAME --deployment green --request-file core/scoring/scoring_test_request.json 
+    ``` 
+    >- Observe the returned scores from the endpoint evaluation.
 
 ### The entire training pipeline is illustrated with this diagram
+
 ![training_pipeline](images/training_pipeline.png)
 
 ## Success criteria
