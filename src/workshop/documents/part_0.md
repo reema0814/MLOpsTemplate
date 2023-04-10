@@ -37,7 +37,7 @@
 
 1. After providing the code you will be successfully logged in to Github as shown below.
 
-  ![](./images/github-05.png)
+   ![](./images/github-05.png)
 
 1. After the login, go to [https://github.com/microsoft/MLOpsTemplate](https://github.com/microsoft/MLOpsTemplate) and click `Fork`.
   
@@ -155,14 +155,12 @@ In this step you will clone the above forked repository into a development envir
         
    Use the code and follow the instruction to finish the login.
    
-   > **Note:** You need to login in and be authenticated to use the `az cli` extension.
+   >**Note:** You need to login in and be authenticated to use the `az cli` extension.
     
    ![](./images/run_mlopsworkshop_azcli006.png)
    
-   After copy the __code__ and go to the link, [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). 
+   After copy the __code__ and go to the link, [https://microsoft.com/devicelogin (https://microsoft.com/devicelogin). 
         
-
-
 1. Configure the subscription and Azure Machine Learning Workspace.
    
    ```bash
@@ -179,7 +177,6 @@ In this step you will clone the above forked repository into a development envir
     
    ![](./images/run_mlopsworkshop_azcli007.png)
 
-
    >**Note:** Once done, **leave the terminal open**. **Do not terminate it** and head to the next task.
 
 ## Task 3 Configure secret in your Github account
@@ -187,7 +184,6 @@ In this step you will clone the above forked repository into a development envir
 The last two tasks include:
    - Creating a Personal Access Token (PAT) in Github.
    - Adding a Service Principal (SP) to your forked repository in Github.
-
 
 ### 3.1 Create PAT (Personal Access Token)
 
@@ -264,5 +260,3 @@ From this section, you'll add the SP information to your repo. The SP informatio
    >**Important:** The name for this secret must be `AZURE_SERVICE_PRINCIPAL`.
 
    ![](./images/mlpos-img11.png)
-
-
