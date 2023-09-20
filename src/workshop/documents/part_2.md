@@ -1,5 +1,5 @@
 
-# Part 2: Use cloud scale compute to run, deploy and manage ML experiment with Azure ML
+# Part 2: Use cloud scale compute to run, deploy and manage ML experiments with Azure ML
 
 ## Pre-requisites
 - Complete [Part 0], [Part 1]
@@ -7,12 +7,12 @@
 - Have Azure ML workspace setup with a Compute Cluster named ```cpu-cluster```
 
 ## Summary 
-After successfully restructuring the jupyter notebook and run modules locally, your team wants to leverage Azure cloud to run the experiment at scale.
-They also want to take advantage of experiment tracking and model management capabilities in Azure ML to keep track of experiment. 
-Finally, the team wants to deploy the model as a rest endpoint for real time inferencing and experience the option of deploying it as batch inferencing.
+After successfully restructuring the Jupyter Notebook and running modules locally, your team wants to leverage Azure Cloud to run the experiment at scale.
+They also want to take advantage of experiment tracking and model management capabilities in Azure ML to keep track of experiments. 
+Finally, the team wants to deploy the model as a rest endpoint for real-time inferencing and experience the option of deploying it as batch inferencing.
 To accomplish these goals, you will perform the following:
 - Run feature_engineering module as a job in Azure AML 
-- Run ml_training module as a job in Azure ML and observe the experiment metrics 
+- Run the ml_training module as a job in Azure ML and observe the experiment metrics 
 - Run evaluating module as a job in Azure ML and observe how the model can be registered to Azure ML model's repo
 - Run the three modules together as a pipeline
 - Deploy and test the produced ML model as an API using Azure Managed Online Endpoint
@@ -27,14 +27,14 @@ To accomplish these goals, you will perform the following:
 
 1. Under **Advanced settings**, give compute name as `cpu-cluster` leave the default values and **Create**.
 
-1. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
+1. Go to the workshop folder. (Skip this step if you are already in the workshop folder from the previous task)
    
    >**Action Item:** Run the following code snippet.
 
    ```bash 
    cd src/workshop
    ```
-1. Set defaults values to configure your resource group and workspace.
+1. Set default values to configure your resource group and workspace.
    
    >**Action Item:** Run the following code snippet and replace YOUR_RESOURCE_GROUP and YOUR_WORKSPACE with ***mlops-rg-<inject key="Deployment ID"></inject>*** and **aml<inject key="Deployment ID"></inject>** respectively.
     
@@ -92,9 +92,9 @@ To accomplish these goals, you will perform the following:
    
    >- Select **endpoint.yml** and **deployment.yml** under scoring folder
    
-   >- Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and press Ctrl+S to save change (If prompted for authentication first click **Authenticate** then press Ctrl+S.)
+   >- Update the ```endpoint.yml``` file by updating the name of the endpoint (should be a unique name) and press Ctrl+S to save the change (If prompted for authentication first click **Authenticate** then press Ctrl+S.)
    
-   >- Update the ```deployment.yml``` file by updating the name of the endpoint (should be same name you defined just above) and Press Ctrl+S to save change.
+   >- Update the ```deployment.yml``` file by updating the name of the endpoint (should be the same name you defined just above) and Press Ctrl+S to save the change.
    
    > -  Move back to the notebook Terminal and create your endpoint by running the following command:
    
@@ -102,7 +102,7 @@ To accomplish these goals, you will perform the following:
    az ml online-endpoint create --file core/scoring/endpoint.yml 
    ```
    
-   >**Note:** All the above jobs will take up to 20 minutes to get executed completely. You can also check the job status by navigating to Jobs under Assets. **Wait until the completion of all the jobs and then only move to next step.**
+   >**Note:** All the above jobs will take up to 20 minutes to get executed completely. You can also check the job status by navigating to Jobs under Assets. **Wait until the completion of all the jobs and then only move to the next step.**
    
    ![Jobs status](images/upd-jobs.png)
  
@@ -114,7 +114,7 @@ To accomplish these goals, you will perform the following:
 
    >**Note:** At this point, it takes about 10 minutes to create a green deployment.
  
- 1. Copy the **Endpoint Name** that is generated as the output of this command and save it in notepad as it will be used in next command.
+ 1. Copy the **Endpoint Name** that is generated as the output of this command and save it in Notepad as it will be used in the next command.
  
  1. Test the deployed service with mock-up data from scoring_test_request.json
   
@@ -125,7 +125,7 @@ To accomplish these goals, you will perform the following:
     ``` 
     >- Observe the returned scores from the endpoint evaluation.
 
-### The entire training pipeline is illustrated with this diagram
+### The entire training pipeline is illustrated in this diagram
 
 ![training_pipeline](images/training_pipeline.png)
 
@@ -133,7 +133,7 @@ To accomplish these goals, you will perform the following:
 - Run the modules individually in Azure 
 - Capture metrics and models in ml_training and ml_evaluating modules
 - Run three modules together in a pipeline
-- Model is deployed successfully to managed endpoint. 
+- Model is deployed successfully to the managed endpoint. 
 - Testing is successful
 
 ## Reference materials
