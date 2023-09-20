@@ -1,25 +1,25 @@
 
 # Part 1: Structure code for fast iterative development
 ## Pre-requisites
-- Complete [Part 0] to setup the Azure ML workspace. Ensure the following:
+- Complete [Part 0] to set up the Azure ML workspace. Ensure the following:
 	- Your conda environment ``mlops-workshop-local`` is activated.
 	- You completed the step to run [create_datasets.py].
 
 ## Summary 
-Your team has been working on a new ML problem. The team has been performing exploratory work on data and algorithm and has come to a state that the solution direction is solidified. Now, it is a time to put a structure into the work so that the team can iterate faster toward building a fully functional solution.   
+Your team has been working on a new ML problem. The team has been performing exploratory work on data and algorithms and has come to a state that the solution direction is solidified. Now, it is time to put a structure into the work so that the team can iterate faster toward building a fully functional solution.   
 
-So far, team members have been working mostly on Jupyter notebooks on their personal compute (Azure CI & PC). As the first step in MLOps, your team needs to accompblish the followings:  
+So far, team members have been working mostly on Jupyter notebooks on their personal compute (Azure CI & PC). As the first step in MLOps, your team needs to accomplish the following:  
 
-- Modularization: monolithic notebook is refactored into python modules that can be developed and tested independently and in parallel by multiple members 
+- Modularization: The monolithic notebook is refactored into Python modules that can be developed and tested independently and in parallel by multiple members 
 - Parameterization: The modules are parameterized so that they be rerun with different parameter values.
 
-To illustrate how the process works, the notebook was refactored into a feature engineering module, an ml training module and an ml evaluating module and you will run these modules individually in local development environment to see how they work.
+To illustrate how the process works, the notebook was refactored into a feature engineering module, an ml training module and an ml evaluating module and you will run these modules individually in the local development environment to see how they work.
 
  ![monolithic to modular](./images/monolithic_modular.png)
 
 ## Task 1:
 
-> **Note:** You can run following tasks on Compute Instance in your Azure Machine Learning. You can use __Jupyter__ or __VSCode__ or __Terminal__.
+> **Note:** You can run the following tasks on Compute Instance in your Azure Machine Learning. You can use __Jupyter__ or __VSCode__ or __Terminal__.
 
 1. Familiarize yourself with the steps in this jupyter
   notebook. This showcases the overall data engineering and model building
@@ -27,11 +27,11 @@ To illustrate how the process works, the notebook was refactored into a feature 
     
    > **Note:** If you do want to run this notebook, it is recommended to run this in a virtual environment using the conda dependencies specified in this file: `MLOpsTemplate/src/workshop/conda-local.yml`. Additionally, if you run the notebook from a Compute Instance, you can first configure your conda environment with these dependencies, and then leverage the ability to add new kernels referenced [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-terminal#add-new-kernels) to run your notebook.
    
-1. Discuss in your team why a monolithic code structure is a challenge to a scalable and repeatable ML development process? 
+1. Discuss with your team why a monolithic code structure is a challenge to a scalable and repeatable ML development process. 
  
-   > **Note:** Now observe how the monolithic notebook was refactored into a feature/data engineering module, a ML training module and a model validation module so that they can be developed and run independently.
+   > **Note:** Now observe how the monolithic notebook was refactored into a feature/data engineering module, an ML training module and a model validation module so that they can be developed and run independently.
 
-1. Go to the workshop folder. (Skip this step if you are already in the workshop folder from previous task)
+1. Go to the workshop folder. (Skip this step if you are already in the workshop folder from the previous task)
     
    > **Action Items:** Run the following code snippet.
    
@@ -42,13 +42,13 @@ To illustrate how the process works, the notebook was refactored into a feature 
     
 1. Create your own development branch where you can make and track changes. This branch will be your development area to create and test new code or pipelines before committing or merging the code into a common branch, such as ```integration```.
 
-   >**Action Items:** Run following command to create a new branch named "yourname-dev"
+   >**Action Items:** Run the following command to create a new branch named "yourname-dev"
   
    ```bash
    git checkout -b yourname-dev
    ```
  
-   >**Note:** If you see **To add an exception for this directory** as an output, then run the command mentioned to call in the output and then **re-run** the the above command again. 
+   >**Note:** If you see **To add an exception for this directory** as an output, then run the command mentioned to call in the output and then **re-run** the above command again. 
 	
    - This will set the working branch to ```yourname-dev```. To check, run the following command:
  
