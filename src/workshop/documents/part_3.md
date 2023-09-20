@@ -5,12 +5,12 @@
 - Complete [Part 0], [Part 1], [Part 2]
 
 ## Summary
-Your team wants to learn how to automate and orchestrate common tasks such as environment setup, training, testing using GitHub Actions. To accomplish this, the following steps will be performed:
+Your team wants to learn how to automate and orchestrate common tasks such as environment setup, training, and testing using GitHub Actions. To accomplish this, the following steps will be performed:
 - Setup a centralized version control to keep track of project code and manage different feature development tracks and releases
-- Learn how to automate and orchestrate common tasks such as environment setup, training, testing by setting up a unit test workflow to run when code is updated in your branch
+- Learn how to automate and orchestrate common tasks such as environment setup, training, and testing by setting up a unit test workflow to run when code is updated in your branch
 
 ## Steps
-1. Move to your dev branch you created in step 1 if you are not already there.
+1. Move to the dev branch you created in step 1 if you are not already there.
    > - Navigate to the repo if not already there ```cd MLOpsTemplate``` with the proper path to the cloned location.
     
    >**Action Items:** 
@@ -21,7 +21,7 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
    cd ..
    ```
 
-   >- Run following command to check out your "yourname-dev"
+   >- Run the following command to check out your "yourname-dev"
         
    ```bash
    git checkout yourname-dev
@@ -38,8 +38,8 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
    nano workshop_unit_test.yml
    ```
    >- Make the following updates to the file: 
-   >- Update the secret name by replacing the ```AZURE_SERVICE_PRINCIPAL``` to match the GitHub secret name for your Service Principal that was created in Part 0. (If you followed the naming convention in part 0, there is no need to update this as your secret name should be ```AZURE_SERVICE_PRINCIPAL```.)
-   >- Update resource group name, workspace name, location with the specific names of your resource group, workspace, and location created in Part 0.
+   >- Update the secret name by replacing the ```AZURE_SERVICE_PRINCIPAL``` to match the GitHub secret name for your Service Principal that was created in Part 0. (If you followed the naming convention in Part 0, there is no need to update this as your secret name should be ```AZURE_SERVICE_PRINCIPAL```.)
+   >- Update the resource group name, workspace name, and location with the specific names of your resource group, workspace, and location created in Part 0.
  
    >**Note:** You can use the arrow keys to move around in the file. Press the "CTRL + X" keys to close the file. You will be prompted to save your changes. Press the "y" key to save your changes and then press enter to exit.
 
@@ -50,10 +50,10 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
      - The `workflow_dispatch` allows the workflow to be run manually which can be useful when testing.
      - The remaining lines highlight what is going to automatically trigger the workflow. It is being triggered on a push to any branch that is not `main` or `integration`. The changes in the push are also filtered to only include changes made to the 
      `feature_engineering` module. 
-   - Review the job starting at the `jobs:` section that has been created already and does the following steps:
-     - Checks out the repo
+   - Review the job starting at the `jobs:` section that has been created already and do the following steps:
+     - Check out the repo
      - Logs into Azure
-     - Creates an AML job to run feature engineering module using the [custom action] and the existing [feature engineering job file]
+     - Creates an AML job to run the feature engineering module using the [custom action] and the existing [feature engineering job file]
 
 1. Now that the necessary changes have been made, the changes can be pushed to your feature branch which will trigger the feature_engineering_unit_test workflow.
 
@@ -78,9 +78,9 @@ Your team wants to learn how to automate and orchestrate common tasks such as en
   
     >**Note:** `git status` shows the files that have been modified. It is useful for seeing the latest status of the files, but isn't necessary to commit changes.
    
-    >- Check to see if the workflow was properly triggered by going to your github repo and selecting the **Actions tab**.
+    >- Check to see if the workflow was properly triggered by going to your GitHub repo and selecting the **Actions tab**.
  
-    >**Note:** If the worflow isn't triggered, you can run a workflow under yourname-dev branch under feature_engineering.yml in Action tab.
+    >**Note:** If the workflow isn't triggered, you can run a workflow under yourname-dev branch under feature_engineering.yml in the Action tab.
    
 ## The CI CD Workflow is shown below:
 
