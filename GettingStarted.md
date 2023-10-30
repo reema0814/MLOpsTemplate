@@ -6,7 +6,9 @@
 
 1. To get the lab environment details, you can select the **Environment** tab. Under the **Environment** tab, you can select **Azure Credentials**, **Service Principal** or **Licenses** based on what credentials you want to use. Additionally, the credentials will also be emailed to your email address provided during the registration. Also, you can start, stop and restart virtual machines from the **Virtual Machines** tab.
 
-   ![](./media/gs-01.png "Lab Environment")
+   ![](./media/ml(4).png "Lab Environment")
+
+   ![](./media/ml(5).png)
 
    ![](./media/ml(1).png)
  
